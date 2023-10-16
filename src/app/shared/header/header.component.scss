@@ -1,15 +1,16 @@
 .app-header {
   .spacer {
     flex: 1 1 auto;
+    // border: 1px solid red;
   }
 
   mat-toolbar {
     background-color: black;
     color: white;
-    padding: 0 186px;
+    padding: 0 70px;
 
     button {
-      margin: 0 16px;
+      // margin: 0 16px;
 
       .mat-mdc-outlined-button:not(:disabled) {
         border-color: rgb(255 255 255 / 99%);
