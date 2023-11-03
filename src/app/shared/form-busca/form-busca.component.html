@@ -1,0 +1,36 @@
+<app-card variant="secondary" class="form-busca">
+  <form>
+    <h2>Passagem</h2>
+    <div class="flex-container">
+      <mat-button-toggle-group aria-label="Tipo de Passagem">
+        <mat-button-toggle>
+          <mat-icon>check</mat-icon>
+          IDA E VOLTA
+        </mat-button-toggle>
+        <mat-button-toggle>
+          <mat-icon></mat-icon>
+          SOMENTE IDA
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <mat-chip-listbox aria-label="Seleção de passagens">
+        <mat-chip-option>1 adulto</mat-chip-option>
+        <mat-chip-option selected>Econômica</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+
+    <div class="flex-container">
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Origem</mat-label>
+        <mat-icon matPreffix>
+          flight_takeoff
+        </mat-icon>
+        <input matInput placeholder="Origem">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon>sync_alt</mat-icon>
+      </button>
+    </div>
+  </form>
+</app-card>
