@@ -22,7 +22,7 @@
     <div class="flex-container">
       <mat-form-field class="input-container" appearance="outline">
         <mat-label>Origem</mat-label>
-        <mat-icon matPreffix>
+        <mat-icon matPrefix>
           flight_takeoff
         </mat-icon>
         <input matInput placeholder="Origem">
@@ -31,6 +31,30 @@
       <button mat-icon-button>
         <mat-icon>sync_alt</mat-icon>
       </button>
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Destino</mat-label>
+        <mat-icon matPrefix>
+          flight_land
+        </mat-icon>
+        <input matInput placeholder="Destino">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Data de ida</mat-label>
+        <input matInput [matDatepicker]="ida">
+        <mat-datepicker-toggle matIconSuffix [for]="ida"></mat-datepicker-toggle>
+        <mat-datepicker #ida></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="input-container" appearance="outline">
+        <mat-label>Data de volta</mat-label>
+        <input matInput [matDatepicker]="volta">
+        <mat-datepicker-toggle matIconSuffix [for]="volta"></mat-datepicker-toggle>
+        <mat-datepicker #volta></mat-datepicker>
+      </mat-form-field>
+      <button mat-flat-button color="primary">BUSCAR</button>
+
     </div>
   </form>
 </app-card>
