@@ -33,10 +33,16 @@
       </ul>
     </div>
     <div class="selecao-categoria">
-      <h2>Categoria</h2>
+      <p><strong>Categoria</strong></p>
       <mat-chip-listbox aria-label="Categoria">
-        <mat-chip-option>Executiva</mat-chip-option>
-        <mat-chip-option>Econômica</mat-chip-option>
+        <mat-chip-option 
+          [selected]="formBuscaService.formBusca.get('tipo')?.value === 'Econômica'"
+          (selectionChange)="formBuscaService.alteraTipo($event, 'Econômica')"
+          value="Econômica">Econômica</mat-chip-option>
+        <mat-chip-option 
+          [selected]="formBuscaService.formBusca.get('tipo')?.value === 'Executiva'"
+          (selectionChange)="formBuscaService.alteraTipo($event, 'Executiva')"
+          value="Executiva">Executiva</mat-chip-option>
       </mat-chip-listbox>
     </div>
   </div>

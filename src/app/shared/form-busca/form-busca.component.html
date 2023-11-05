@@ -13,10 +13,21 @@
         </mat-button-toggle>
       </mat-button-toggle-group>
 
-      <mat-chip-listbox (click)="openDialog()" aria-label="Seleção de passagens">
+      <!-- <mat-chip-listbox (click)="openDialog()" aria-label="Seleção de passagens">
         <mat-chip-option>1 adulto</mat-chip-option>
         <mat-chip-option selected>Econômica</mat-chip-option>
-      </mat-chip-listbox>
+      </mat-chip-listbox> -->
+
+      <mat-chip (click)="formBuscaService.openDialog()">
+        <div class="inner">
+          <mat-icon>check</mat-icon> {{formBuscaService.getDescricaoPassageiro()}}
+        </div>
+      </mat-chip>
+      <mat-chip (click)="formBuscaService.openDialog()">
+        <div class="inner">
+          <mat-icon>check</mat-icon> Econômica
+        </div>
+      </mat-chip>
     </div>
 
     <div class="flex-container">
@@ -42,6 +53,7 @@
         <mat-datepicker-toggle matIconSuffix [for]="volta"></mat-datepicker-toggle>
         <mat-datepicker #volta></mat-datepicker>
       </mat-form-field>
+
       <button mat-flat-button color="primary">BUSCAR</button>
 
     </div>
