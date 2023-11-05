@@ -12,7 +12,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ContainerComponent } from './shared/container/container.component';
-import { HomeComponent } from './pages/home/home/home.component';
 import { CardBuscaComponent } from './shared/card-busca/card-busca.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardDepoimentoComponent } from './shared/card-depoimento/card-depoimento.component';
@@ -30,6 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { DepoimentosComponent } from './pages/home/depoimentos/depoimentos.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf
     FormBuscaComponent,
     ModalComponent,
     BotaoControleComponent,
-    DropdownUfComponent
+    DropdownUfComponent,
+    DepoimentosComponent
   ],
   imports: [
     BrowserModule,
